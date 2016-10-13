@@ -1,0 +1,2 @@
+﻿stdafx.obj : warning LNK4221: 이 개체 파일은 이전에 정의되지 않은 공용 기호를 정의하지 않으므로 이 라이브러리를 사용하는 어떠한 링크 작업에도 사용되지 않습니다.
+  Bone_NetwrokLibrary.vcxproj -> C:\Users\임희택\Desktop\Code\Bone_NetwrokLibrary\x64\Debug\Bone_NetwrokLibrary.lib
