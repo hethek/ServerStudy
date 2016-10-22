@@ -1,4 +1,6 @@
+#include "Common.h"
 #include "SceneManager.h"
+#include "RenderManager.h"
 
 namespace BONE_FRAMEWORK
 {
@@ -52,18 +54,35 @@ namespace BONE_FRAMEWORK
 		if (!sceneList[_name]->LoadContents())
 			return FALSE;
 
-		double lastTime = (double)timeGetTime();;
+		double lastTime = (double)timeGetTime();
 
 		while (!endFlag)
 		{
-			double curTime = (double)timeGetTime();
-			timeDelta = (lastTime - curTime) / 1000;
+			if (PeekMessage(&message, NULL, 0, 0, PM_REMOVE))
+			{
+				if (message.message == WM_QUIT)
+				{
+					break;
+				}
+				else
+				{
+					TranslateMessage(&message);
+					DispatchMessage(&message);
+				}
+			}
+			else
+			{
+				double curTime = (double)timeGetTime();
+				timeDelta = (lastTime - curTime) / 1000;
 
-			sceneList[_name]->Update(timeDelta);
-			sceneList[_name]->Render(timeDelta);
-			sceneList[_name]->LateRender(timeDelta);
+				sceneList[_name]->Update(timeDelta);
+				sceneList[_name]->Render(timeDelta);
+				sceneList[_name]->LateRender(timeDelta);
 
-			lastTime = (double)timeGetTime();
+				lastTime = (double)timeGetTime();
+				if (NULL == GETSINGLE(CRenderManager)->RenderFrame())
+					return FALSE;
+			}
 		}
 
 		sceneList[_name]->ReleaseMembers();

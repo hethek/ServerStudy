@@ -6,19 +6,18 @@ namespace BONE_FRAMEWORK
 	template<class T>
 	class ISingleton abstract
 	{
-	private:
+	protected:
 		static T* instance;
 
 		ISingleton(VOID)
 		{
 		}
 
-	public:
 		virtual ~ISingleton(VOID)
 		{
 
 		}
-
+	public:
 		static T* GetInstance()
 		{
 			if(instance == NULL)

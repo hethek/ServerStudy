@@ -1,3 +1,4 @@
+#include "Common.h"
 #include "Scene.h"
 
 namespace BONE_FRAMEWORK
@@ -124,13 +125,13 @@ namespace BONE_FRAMEWORK
 	{
 		for (auto iter = objectList.begin(); iter != objectList.end(); iter++)
 		{
-			if ((*iter)->Initialize() == FALSE)
+			if ((*iter)->Release() == FALSE)
 				return FALSE;
 		}
 
 		for (auto iter = staticObjectList.begin(); iter != staticObjectList.end(); iter++)
 		{
-			if ((*iter)->Initialize() == FALSE)
+			if ((*iter)->Release() == FALSE)
 				return FALSE;
 		}
 

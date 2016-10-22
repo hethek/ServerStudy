@@ -40,4 +40,3 @@ namespace BONE_FRAMEWORK
 		VOID SetActive(BOOL _isActive);
 	};
 }
-

@@ -1,5 +1,4 @@
 #pragma once
-#include "Common.h"
 #include "Singleton.h"
 #include "Scene.h"
 
@@ -10,9 +9,11 @@ namespace BONE_FRAMEWORK
 	private:
 		std::map<std::string, CScene*> sceneList;
 		std::string currentScene;
-		
+
 		double timeDelta;
 		BOOL endFlag;
+
+		MSG message;
 
 	public:
 		virtual BOOL InitializeMembers();

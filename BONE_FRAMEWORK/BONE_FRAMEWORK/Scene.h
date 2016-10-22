@@ -25,4 +25,17 @@ namespace BONE_FRAMEWORK
 
 		BOOL ReleaseMembers();
 	};
+
+	class CSceneSP
+	{
+	public:
+		CSceneSP(VOID) { Scene = new CScene(); }
+		~CSceneSP(VOID) {delete Scene;}
+
+		CScene* operator->(VOID) { return Scene; }
+		operator CScene*(VOID) { return Scene; }
+
+	private:
+		CScene *Scene;
+	};
 }
