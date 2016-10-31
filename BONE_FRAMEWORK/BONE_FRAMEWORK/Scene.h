@@ -1,6 +1,7 @@
 #pragma once
 #include "Common.h"
 #include "GameObject.h"
+#include "SmartPointer.h"
 
 namespace BONE_FRAMEWORK
 {
@@ -24,18 +25,5 @@ namespace BONE_FRAMEWORK
 		VOID LateRender(double _timeDelta);
 
 		BOOL ReleaseMembers();
-	};
-
-	class CSceneSP
-	{
-	public:
-		CSceneSP(VOID) { Scene = new CScene(); }
-		~CSceneSP(VOID) {delete Scene;}
-
-		CScene* operator->(VOID) { return Scene; }
-		operator CScene*(VOID) { return Scene; }
-
-	private:
-		CScene *Scene;
 	};
 }

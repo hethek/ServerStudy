@@ -72,16 +72,19 @@ namespace BONE_FRAMEWORK
 			}
 			else
 			{
-				double curTime = (double)timeGetTime();
-				timeDelta = (lastTime - curTime) / 1000;
-
-				sceneList[_name]->Update(timeDelta);
-				sceneList[_name]->Render(timeDelta);
-				sceneList[_name]->LateRender(timeDelta);
-
-				lastTime = (double)timeGetTime();
-				if (NULL == GETSINGLE(CRenderManager)->RenderFrame())
+				if (NULL == GETSINGLE(CRenderManager)->RenderStatr())
 					return FALSE;
+				{
+					double curTime = (double)timeGetTime();
+					timeDelta = (lastTime - curTime) / 1000;
+
+					sceneList[_name]->Update(timeDelta);
+					sceneList[_name]->Render(timeDelta);
+					sceneList[_name]->LateRender(timeDelta);
+
+					lastTime = (double)timeGetTime();
+				}
+				GETSINGLE(CRenderManager)->RenderEnd();
 			}
 		}
 

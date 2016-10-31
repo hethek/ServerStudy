@@ -1,31 +1,45 @@
 #include "Common.h"
 #include "Interface.h"
+#include "SmartPointer.h"
 #include "SceneManager.h"
 #include "InputManager.h"
 #include "RenderManager.h"
+#include "Player.h"
 using namespace BONE_FRAMEWORK;
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance
 	, LPSTR lpszCmdParam, int nCmdShow)
 {
-	HWND hWnd = FastCreateWindow(hInstance, "SPACE_WAR", 1280, 1024);
 
+	HWND hWnd;
+	FastCreateWindow(hInstance, hWnd, "asd", 800, 600);
 
-	 //매니저 초기화
-	CSceneManager::GetInstance()->InitializeMembers();
-	InputManager::GetInstance()->InitializeMembers();
+	//int a = GetLastError();
+
+	//매니저 초기화
+	GETSINGLE(CRenderManager)->InitializeMembers();
+	GETSINGLE(CSceneManager)->InitializeMembers();
 	{
-		//SmartPointer<CScene> scene = new CScene();
-		//SmartPointer<Player> player = new Player();
+		//디바이스 등록
+		if (GETSINGLE(CRenderManager)->Create(hWnd))
+			FALSE;
 
-		//scene->RegisterGameObjec(*player);
+		//컴포넌트
 
-		//CSceneManager::GetInstance()->RegisterScene(*scene, "mainScene");
-		//CSceneManager::GetInstance()->Start("mainScene");
+		//게임 오브젝트
+		SmartPointer<CPlayer> player;
+		player->Initialize();
+
+		//씬 등록
+		SmartPointer<CScene> scene;
+		scene->RegisterGameObject(player, false);
+
+		GETSINGLE(CSceneManager)->RegisterScene(scene, "mainScene");
+		GETSINGLE(CSceneManager)->Start("mainScene");
 	}
-
-	CSceneManager::GetInstance()->ReleaseMembers();
-	InputManager::GetInstance()->ReleaseMembers();
+	GETSINGLE(CRenderManager)->ReleaseMembers();
+	GETSINGLE(CSceneManager)->ReleaseMembers();
 
 	return 0;
 }
+

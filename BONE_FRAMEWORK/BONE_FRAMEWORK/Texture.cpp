@@ -1,39 +1,33 @@
 #include "Common.h"
 #include "Texture.h"
-
+#include "RenderManager.h"
 
 namespace BONE_FRAMEWORK
 {
 	CTexture::CTexture()
 	{
-		m_pDev = NULL;
-
-		m_pTx = NULL;
-		ZeroMemory(&m_Img, sizeof(m_Img));
+		texture = NULL;
+		ZeroMemory(&imgInfo, sizeof(imgInfo));
 	}
+
 
 	CTexture::~CTexture()
 	{
 		Destroy();
+
 	}
 
 	void CTexture::Destroy()
 	{
-		if (m_pTx)
-		{
-			m_pTx->Release();
-			m_pTx = NULL;
-		}
+		SAFE_RELEASE(texture);
 	}
 
-	INT CTexture::Create(LPDIRECT3DDEVICE9 pDev, LPTSTR sFile)
+	INT CTexture::Create(LPTSTR sFile)
 	{
-		m_pDev = pDev;
-
 		DWORD	dColorKey = 0x00FFFFFF;
 
 		if (FAILED(D3DXCreateTextureFromFileEx(
-			m_pDev,
+			GETSINGLE(CRenderManager)->d3dDevice,
 			sFile,
 			D3DX_DEFAULT,
 			D3DX_DEFAULT,
@@ -44,12 +38,12 @@ namespace BONE_FRAMEWORK
 			D3DX_FILTER_NONE,
 			D3DX_FILTER_NONE,
 			dColorKey,
-			&m_Img,
+			&imgInfo,
 			NULL,
-			&m_pTx
+			&texture
 			)))
 		{
-			m_pTx = NULL;
+			texture = NULL;
 			MessageBoxW(
 				GetActiveWindow(),
 				_T("Create Texture Failed"),
@@ -64,25 +58,25 @@ namespace BONE_FRAMEWORK
 
 	INT CTexture::GetImageWidth()
 	{
-		return m_Img.Width;
+		return imgInfo.Width;
 	}
 
 
 	INT CTexture::GetImageHeight()
 	{
-		return m_Img.Height;
+		return imgInfo.Height;
 	}
 
 	void CTexture::GetImageRect(RECT* pRc)
 	{
 		pRc->left = 0;
 		pRc->top = 0;
-		pRc->right = m_Img.Width;
-		pRc->bottom = m_Img.Height;
+		pRc->right = imgInfo.Width;
+		pRc->bottom = imgInfo.Height;
 	}
 
 	LPDIRECT3DTEXTURE9 CTexture::GetTexture()
 	{
-		return m_pTx;
+		return texture;
 	}
 }

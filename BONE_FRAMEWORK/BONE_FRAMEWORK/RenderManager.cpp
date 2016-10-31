@@ -1,13 +1,14 @@
 #include "Common.h"
-#include "RenderManager.h"
 #include "Interface.h"
+#include "RenderManager.h"
 
 namespace BONE_FRAMEWORK
 {
 	BOOL CRenderManager::InitializeMembers()
 	{
-		d3d9 = NULL;			// D3D
-		d3dDevice = NULL;		// Device
+		d3d9 = NULL;		
+		d3dDevice = NULL;		
+		d3dSprite = NULL;		
 
 		return TRUE;
 	}
@@ -58,31 +59,46 @@ namespace BONE_FRAMEWORK
 			return E_FAIL;
 		}
 
+		// DX의 스프라이트는 디바이스가 생성된 후에 만들어야 한다.
+		if (FAILED(D3DXCreateSprite(d3dDevice, &d3dSprite)))
+		{
+			SAFE_RELEASE(d3dDevice);
+			SAFE_RELEASE(d3dSprite);
+			return -1;
+		}
 
 		return TRUE;
 	}
 
 	void CRenderManager::Cleanup()
 	{
+		SAFE_RELEASE(d3dSprite);
 		SAFE_RELEASE(d3dDevice);
 		SAFE_RELEASE(d3d9);
 	}
 
-	BOOL CRenderManager::RenderFrame()
+	BOOL CRenderManager::RenderStatr()
 	{
-
-		D3DCOLOR bgColour = 0xFF0000FF;	// 배경색상 - 파랑
-
-		d3dDevice->Clear(0, NULL, (D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER), bgColour, 1.0f, 0);
+		d3dDevice->Clear(
+			0, 
+			NULL, 
+			(D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER),
+			D3DCOLOR_XRGB(0, 120, 160), 
+			1.0f, 0);
 
 		d3dDevice->BeginScene();
-		{
 
-		}
+		d3dSprite->Begin(D3DXSPRITE_ALPHABLEND);
+
+		return TRUE;
+	}
+
+	void CRenderManager::RenderEnd()
+	{
+		d3dSprite->End();
+
 		d3dDevice->EndScene();
 
 		d3dDevice->Present(NULL, NULL, NULL, NULL);
-
-		return TRUE;
 	}
 }

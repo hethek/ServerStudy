@@ -5,23 +5,23 @@ namespace BONE_FRAMEWORK
 	class CTexture
 	{
 	public:
-		CTexture();
-		~CTexture();
+		D3DXIMAGE_INFO		imgInfo;
+		LPDIRECT3DTEXTURE9	texture;
 
-		LPDIRECT3DDEVICE9	m_pDev;
-		D3DXIMAGE_INFO		m_Img;
-		LPDIRECT3DTEXTURE9	m_pTx;
-
-		RECT			m_lmgRect;
+		RECT imgRect;
 
 	public:
-		INT		Create(LPDIRECT3DDEVICE9 pDev, LPTSTR sFile);
+		INT		Create(LPTSTR sFile);
 		void	Destroy();
 
 	public:
 		INT		GetImageWidth();
 		INT		GetImageHeight();
 		void	GetImageRect(RECT* pRc);
+
+	public:
+		CTexture();
+		~CTexture();
 
 		LPDIRECT3DTEXTURE9	GetTexture();
 	};

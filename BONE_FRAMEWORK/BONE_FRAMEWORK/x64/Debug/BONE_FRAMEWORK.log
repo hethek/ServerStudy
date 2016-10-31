@@ -1,6 +1,3 @@
-﻿  RenderManager.cpp
-d3dx9.lib(d3dx9_43.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR이(가) d3d9.lib(d3d9.dll)에 이미 정의되어 있습니다. 초 정의가 무시됩니다.
-d3dx9.lib(d3dx9_43.dll) : warning LNK4221: 이 개체 파일은 이전에 정의되지 않은 공용 기호를 정의하지 않으므로 이 라이브러리를 사용하는 어떠한 링크 작업에도 사용되지 않습니다.
-winmm.lib(WINMM.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR이(가) d3d9.lib(d3d9.dll)에 이미 정의되어 있습니다. 초 정의가 무시됩니다.
-winmm.lib(WINMM.dll) : warning LNK4221: 이 개체 파일은 이전에 정의되지 않은 공용 기호를 정의하지 않으므로 이 라이브러리를 사용하는 어떠한 링크 작업에도 사용되지 않습니다.
-  BONE_FRAMEWORK.vcxproj -> C:\Users\임희택\Desktop\Code\BONE_FRAMEWORK\x64\Debug\BONE_FRAMEWORK.lib
+﻿  Player.cpp
+  BONE_FRAMEWORK.vcxproj -> C:\Users\임희택\Desktop\Code\BONE_FRAMEWORK\x64\Debug\BONE_FRAMEWORK.exe
+  BONE_FRAMEWORK.vcxproj -> C:\Users\임희택\Desktop\Code\BONE_FRAMEWORK\x64\Debug\BONE_FRAMEWORK.pdb (Partial PDB)

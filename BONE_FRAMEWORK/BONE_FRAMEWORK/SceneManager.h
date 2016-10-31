@@ -1,6 +1,7 @@
 #pragma once
 #include "Singleton.h"
 #include "Scene.h"
+#include "Texture.h"
 
 namespace BONE_FRAMEWORK
 {
@@ -16,9 +17,6 @@ namespace BONE_FRAMEWORK
 		MSG message;
 
 	public:
-		virtual BOOL InitializeMembers();
-		virtual BOOL ReleaseMembers();
-
 		CScene* GetCurrentScene();
 
 		VOID EndScene();
@@ -27,6 +25,10 @@ namespace BONE_FRAMEWORK
 		double GetTimeDelta();
 
 		BOOL Start(std::string _name);
+
+	public:
+		virtual BOOL InitializeMembers();
+		virtual BOOL ReleaseMembers();
 	};
 }
 
