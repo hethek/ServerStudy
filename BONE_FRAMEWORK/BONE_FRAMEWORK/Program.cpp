@@ -5,6 +5,9 @@
 #include "InputManager.h"
 #include "RenderManager.h"
 #include "Player.h"
+#include "Back.h"
+#include "Texture.h"
+
 using namespace BONE_FRAMEWORK;
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance
@@ -24,14 +27,16 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance
 		if (GETSINGLE(CRenderManager)->Create(hWnd))
 			FALSE;
 
-		//컴포넌트
-
 		//게임 오브젝트
+		SmartPointer<CBack> back;
+		back->Initialize();
+
 		SmartPointer<CPlayer> player;
 		player->Initialize();
 
 		//씬 등록
 		SmartPointer<CScene> scene;
+		scene->RegisterGameObject(back, false);
 		scene->RegisterGameObject(player, false);
 
 		GETSINGLE(CSceneManager)->RegisterScene(scene, "mainScene");

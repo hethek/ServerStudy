@@ -5,83 +5,133 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="리소스 파일">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\00.Main">
+      <UniqueIdentifier>{a6ac8f50-8417-42bb-aa60-b982704c3947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Scene">
+      <UniqueIdentifier>{14019b07-3124-4f49-802b-b5e61577ecea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Scene\00.main">
+      <UniqueIdentifier>{ff2fea5c-d710-4edb-aa2b-39aa510650ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.GameOgject">
+      <UniqueIdentifier>{40d78a51-403e-47f2-90b8-48d6bab7020b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.GameOgject\00.Back">
+      <UniqueIdentifier>{931dfaa2-d401-4c71-8019-213524ed10bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.GameOgject\01.player">
+      <UniqueIdentifier>{103910d7-7818-4254-b575-d3369d39c984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Component">
+      <UniqueIdentifier>{551fc96b-4d76-4996-a066-400d291d1ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Component\00.Texture">
+      <UniqueIdentifier>{3bc24b04-84f4-47fa-81c0-07a22ebfc07f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Manager">
+      <UniqueIdentifier>{47eb9f7f-3215-406b-a56d-9e455ac705f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Manager\00.SceneManager">
+      <UniqueIdentifier>{d9c25f81-5102-43be-8961-aabc272475a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Manager\01.RenderManager">
+      <UniqueIdentifier>{c8f4a226-c370-414d-9d35-59a506b1175d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Manager\02.InputManager">
+      <UniqueIdentifier>{3d7dda8a-0f0c-4ae1-a565-31c5c51a0c9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\00.Main\00.Interface">
+      <UniqueIdentifier>{d68408ac-ea1f-45f1-88d9-ec4bd854add6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99.Headers">
+      <UniqueIdentifier>{96d691d7-01aa-4bc2-a700-d120da2dab81}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Component.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Scene.cpp">
+      <Filter>소스 파일\01.Scene\00.main</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\02.GameOgject</Filter>
     </ClCompile>
-    <ClCompile Include="Interface.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Program.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderManager.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Back.cpp">
+      <Filter>소스 파일\02.GameOgject\00.Back</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\02.GameOgject\01.player</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>소스 파일\03.Component</Filter>
     </ClCompile>
     <ClCompile Include="Texture.cpp">
+      <Filter>소스 파일\03.Component\00.Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>소스 파일\04.Manager\00.SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager.cpp">
+      <Filter>소스 파일\04.Manager\01.RenderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.cpp">
+      <Filter>소스 파일\00.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>소스 파일\00.Main\00.Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Singleton.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\01.Scene\00.main</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\02.GameOgject</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Common.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Interface.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="InputManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SmartPointer.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Back.h">
+      <Filter>소스 파일\02.GameOgject\00.Back</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\02.GameOgject\01.player</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>소스 파일\03.Component</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\03.Component\00.Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>소스 파일\04.Manager\00.SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>소스 파일\04.Manager\01.RenderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>소스 파일\04.Manager\02.InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>소스 파일\00.Main\00.Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>소스 파일\99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartPointer.h">
+      <Filter>소스 파일\99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>소스 파일\99.Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

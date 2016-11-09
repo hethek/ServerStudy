@@ -14,12 +14,6 @@ namespace BONE_FRAMEWORK
 	public:
 		enum MOUSE_STATUS { MOUSE_NONE, MOUSE_DOWN, MOUSE_UP };
 
-	private:
-		Vector2 mousePosition;
-		MOUSE_STATUS mouseLBStatus;
-		MOUSE_STATUS mouseRBStatus;
-		char currentKeycode;
-
 	public:
 		virtual BOOL InitializeMembers();
 		virtual BOOL ReleaseMembers();
@@ -35,5 +29,11 @@ namespace BONE_FRAMEWORK
 
 		BOOL KeyDown(char _keycode, BOOL _isLoop);
 		BOOL KeyUp(char _keycode);
+
+	private:
+		Vector2 mousePosition;
+		MOUSE_STATUS mouseLBStatus;
+		MOUSE_STATUS mouseRBStatus;
+		char currentKeycode;
 	};
 }

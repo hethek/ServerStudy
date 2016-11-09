@@ -54,7 +54,8 @@ namespace BONE_FRAMEWORK
 	{
 		for (auto iter = components.begin(); iter != components.end(); iter++)
 		{
-
+			//if ((*iter)->GetType() == "CTexture")
+				//(*iter)->LoadContent;
 		}
 
 		return TRUE;
@@ -77,7 +78,10 @@ namespace BONE_FRAMEWORK
 
 		for (auto iter = components.begin(); iter != components.end(); iter++)
 		{
-
+			if ((*iter)->GetType() == "player" || (*iter)->GetType() == "back")
+			{
+				(*iter)->Render();
+			}
 		}
 	}
 

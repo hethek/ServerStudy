@@ -7,9 +7,6 @@ namespace BONE_FRAMEWORK
 	class CPlayer : public CGameObject
 	{
 	public:
-		CTexture *back;
-
-	public:
 		CPlayer();
 		~CPlayer();
 
@@ -19,6 +16,9 @@ namespace BONE_FRAMEWORK
 		virtual VOID Update(double _timeDelta);
 		VOID Render(double _timeDelta);
 		virtual VOID LateRender(double _timeDelta);
+
+	private:
+		CTexture *mario;
 	};
 }
 

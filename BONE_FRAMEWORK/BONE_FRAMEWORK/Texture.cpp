@@ -5,8 +5,8 @@
 namespace BONE_FRAMEWORK
 {
 	CTexture::CTexture()
+		:texture(NULL), imgPos(D3DXVECTOR3(0, 0, 0))
 	{
-		texture = NULL;
 		ZeroMemory(&imgInfo, sizeof(imgInfo));
 	}
 
@@ -14,7 +14,6 @@ namespace BONE_FRAMEWORK
 	CTexture::~CTexture()
 	{
 		Destroy();
-
 	}
 
 	void CTexture::Destroy()
@@ -54,6 +53,16 @@ namespace BONE_FRAMEWORK
 		}
 
 		return 0;
+	}
+
+	VOID CTexture::Render()
+	{
+		GETSINGLE(CRenderManager)->d3dSprite->Draw(
+			GetTexture(),
+			&imgRect,
+			NULL,
+			&imgPos,
+			D3DXCOLOR(1, 1, 1, 1));
 	}
 
 	INT CTexture::GetImageWidth()

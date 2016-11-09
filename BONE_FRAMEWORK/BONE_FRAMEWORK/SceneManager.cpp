@@ -90,5 +90,7 @@ namespace BONE_FRAMEWORK
 
 		sceneList[_name]->ReleaseMembers();
 		endFlag = FALSE;
+
+		return TRUE;
 	}
 }

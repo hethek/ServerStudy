@@ -11,6 +11,7 @@ namespace BONE_FRAMEWORK
 	public:
 		std::string GetType();
 		VOID SetType(std::string _type);
+		virtual VOID Render();
 
 	public:
 		CComponent(VOID);

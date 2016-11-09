@@ -19,4 +19,9 @@ namespace BONE_FRAMEWORK
 	{
 		type = _type;
 	}
+
+	VOID CComponent::Render()
+	{
+
+	}
 }

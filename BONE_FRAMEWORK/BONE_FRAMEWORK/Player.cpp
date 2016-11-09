@@ -5,9 +5,10 @@
 namespace BONE_FRAMEWORK
 {
 	CPlayer::CPlayer()
+		:mario(NULL)
 	{
-	}
 
+	}
 
 	CPlayer::~CPlayer()
 	{
@@ -15,11 +16,22 @@ namespace BONE_FRAMEWORK
 
 	BOOL CPlayer::Initialize()
 	{
-		back = new CTexture;
-		if (FAILED(back->Create(_T("Texture/mario_back.png"))))
-			return -1;
+		mario = new CTexture();
+		mario->SetType("player");
+		mario->Create(_T("Texture/mario_all.png"));
+		mario->GetImageRect(&(mario->imgRect));
 
-		back->GetImageRect(&(back->imgRect));
+		// 마리오를 그린다.
+		FLOAT		fX1 = mario->imgInfo.Width / 18.f  * (7 + 0);
+		FLOAT		fY1 = mario->imgInfo.Height / 2.f * (0 + 0);
+
+		FLOAT		fX2 = mario->imgInfo.Width / 18.f  * (7 + 1);
+		FLOAT		fY2 = mario->imgInfo.Height / 2.f * (0 + 1);
+
+		mario->imgRect = { LONG(fX1), LONG(fY1), LONG(fX2), LONG(fY2) };
+		mario->imgPos = D3DXVECTOR3(500, 362, 0);
+		
+		this->AddComponent(mario);
 
 		return TRUE;
 	}
@@ -31,19 +43,16 @@ namespace BONE_FRAMEWORK
 
 	VOID CPlayer::Update(double _timeDelta)
 	{
-
+		//back->SetOriginRect();
 	}
 
 	VOID CPlayer::Render(double _timeDelta)
 	{
+		mario->Render();
 	}
 
 	VOID CPlayer::LateRender(double _timeDelta)
 	{
-		GETSINGLE(CRenderManager)->d3dSprite->Draw(back->GetTexture()
-			, &(back->imgRect)
-			, NULL
-			, NULL
-			, D3DXCOLOR(1, 1, 1, 1));
+		
 	}
 }
