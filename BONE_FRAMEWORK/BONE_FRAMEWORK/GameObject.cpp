@@ -78,7 +78,7 @@ namespace BONE_FRAMEWORK
 
 		for (auto iter = components.begin(); iter != components.end(); iter++)
 		{
-			if ((*iter)->GetType() == "player" || (*iter)->GetType() == "back")
+			if ((*iter)->GetType() == "texture")
 			{
 				(*iter)->Render();
 			}

@@ -17,7 +17,7 @@ namespace BONE_FRAMEWORK
 	BOOL CBack::Initialize()
 	{
 		back = new CTexture();
-		back->SetType("back");
+		back->SetType("texture");
 		back->Create(_T("Texture/mario_back.png"));
 		back->GetImageRect(&(back->imgRect));
 		this->AddComponent(back);

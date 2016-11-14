@@ -1,15 +1,4 @@
-﻿  Texture.cpp
-  SceneManager.cpp
-  Scene.cpp
-  RenderManager.cpp
-  Player.cpp
-  Interface.cpp
-g:\개인\serverstudy\bone_framework\bone_framework\interface.cpp(28): warning C4996: 'mbstowcs': This function or variable may be unsafe. Consider using mbstowcs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(920): note: 'mbstowcs' 선언을 참조하십시오.
-  GameObject.cpp
-  Component.cpp
-  Back.cpp
-  코드를 생성하고 있습니다...
+﻿  Camera.cpp
   Program.cpp
   BONE_FRAMEWORK.vcxproj -> G:\개인\ServerStudy\BONE_FRAMEWORK\x64\Debug\BONE_FRAMEWORK.exe
   BONE_FRAMEWORK.vcxproj -> G:\개인\ServerStudy\BONE_FRAMEWORK\x64\Debug\BONE_FRAMEWORK.pdb (Partial PDB)

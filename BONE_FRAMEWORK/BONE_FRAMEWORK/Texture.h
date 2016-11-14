@@ -26,7 +26,6 @@ namespace BONE_FRAMEWORK
 
 		RECT		imgRect;
 		D3DXVECTOR3 imgPos;
-		D3DXMATRIX	imgMt;
 	};
 }
 

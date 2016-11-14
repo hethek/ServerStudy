@@ -17,7 +17,7 @@ namespace BONE_FRAMEWORK
 	BOOL CPlayer::Initialize()
 	{
 		mario = new CTexture();
-		mario->SetType("player");
+		mario->SetType("texture");
 		mario->Create(_T("Texture/mario_all.png"));
 		mario->GetImageRect(&(mario->imgRect));
 

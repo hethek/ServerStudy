@@ -6,7 +6,7 @@
 #include "RenderManager.h"
 #include "Player.h"
 #include "Back.h"
-#include "Texture.h"
+#include "MainCamera.h"
 
 using namespace BONE_FRAMEWORK;
 
@@ -29,15 +29,16 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance
 
 		//게임 오브젝트
 		SmartPointer<CBack> back;
-		back->Initialize();
 
 		SmartPointer<CPlayer> player;
-		player->Initialize();
+
+		SmartPointer<CMainCamera> mainCamera;
 
 		//씬 등록
 		SmartPointer<CScene> scene;
 		scene->RegisterGameObject(back, false);
 		scene->RegisterGameObject(player, false);
+		scene->RegisterGameObject(mainCamera, false);
 
 		GETSINGLE(CSceneManager)->RegisterScene(scene, "mainScene");
 		GETSINGLE(CSceneManager)->Start("mainScene");
