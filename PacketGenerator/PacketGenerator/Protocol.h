@@ -1,0 +1,23 @@
+#pragma once
+
+typedef enum TCP_PROTOCOL
+{
+	PT_VERSION = 0x1000000,
+
+	PT_CHANNEL_NICKNAME,
+	/*
+	WCHAR			:		USER_ID[32]
+	WCHAR			:		NICK_NAME[32]
+	*/
+	PT_CHANNEL_NICKNAME_SUCC_U,
+	/*
+	WCHAR			:		USER_ID[32]
+	WCHAR			:		NICK_NAME[32]
+	*/
+	PT_CHANNEL_NICKNAME_FAIL_U,
+	/*
+	DWORD			:		ERROR_CODE
+	*/
+
+	PT_END
+};
