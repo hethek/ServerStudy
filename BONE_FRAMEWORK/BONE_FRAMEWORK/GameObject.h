@@ -1,6 +1,6 @@
 #pragma once
-#include "Common.h"
 #include "Component.h"
+#include "Texture.h"
 
 namespace BONE_FRAMEWORK
 {
@@ -12,6 +12,7 @@ namespace BONE_FRAMEWORK
 		BOOL isStatic;
 
 		std::vector<CComponent*> components;
+		CTexture *texture;
 
 	public:
 		CGameObject(VOID);

@@ -1,3 +1,4 @@
+#include "Common.h"
 #include "GameObject.h"
 
 namespace BONE_FRAMEWORK

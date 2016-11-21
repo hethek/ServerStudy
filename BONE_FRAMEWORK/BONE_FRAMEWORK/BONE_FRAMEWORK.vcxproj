@@ -143,7 +143,6 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Interface.cpp" />
-    <ClCompile Include="MainCamera.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Program.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -152,7 +151,6 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Texture3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Back.h" />
@@ -163,7 +161,6 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Interface.h" />
-    <ClInclude Include="MainCamera.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RenderManager.h" />
     <ClInclude Include="Scene.h" />
@@ -171,7 +168,6 @@
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="SmartPointer.h" />
     <ClInclude Include="Texture.h" />
-    <ClInclude Include="Texture3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

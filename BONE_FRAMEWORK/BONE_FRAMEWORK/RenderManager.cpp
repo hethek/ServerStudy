@@ -31,11 +31,11 @@ namespace BONE_FRAMEWORK
 		RECT ClientRect;
 		GetClientRect(hWnd, &ClientRect);
 
-		int width = ClientRect.right;
-		int height = ClientRect.bottom;
+		winWidth = ClientRect.right;
+		winHeight = ClientRect.bottom;
 
-		d3dPP.BackBufferWidth = width;
-		d3dPP.BackBufferHeight = height;
+		d3dPP.BackBufferWidth = winWidth;
+		d3dPP.BackBufferHeight = winHeight;
 		d3dPP.BackBufferFormat = D3DFMT_A8R8G8B8;
 		d3dPP.BackBufferCount = 1;
 		d3dPP.MultiSampleType = D3DMULTISAMPLE_NONE;

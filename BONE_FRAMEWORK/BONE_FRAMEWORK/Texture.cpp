@@ -21,16 +21,16 @@ namespace BONE_FRAMEWORK
 		SAFE_RELEASE(texture);
 	}
 
-	INT CTexture::Create(LPTSTR sFile)
+	INT CTexture::Create(LPTSTR sFile, DWORD _dColorKey /* = 0x00FFFFFF*/)
 	{
-		DWORD	dColorKey = 0x00FFFFFF;
+		DWORD dColorKey = _dColorKey;
 
 		if (FAILED(D3DXCreateTextureFromFileEx(
 			GETSINGLE(CRenderManager)->d3dDevice,
 			sFile,
 			D3DX_DEFAULT,
 			D3DX_DEFAULT,
-			D3DX_DEFAULT,
+			1,
 			0,
 			D3DFMT_UNKNOWN,
 			D3DPOOL_MANAGED,

@@ -10,7 +10,7 @@ namespace BONE_FRAMEWORK
 		~CTexture();
 
 	public:
-		INT		Create(LPTSTR sFile);
+		INT		Create(LPTSTR sFile, DWORD dColorKey = 0x00FFFFFF);
 		VOID	Render();
 		void	Destroy();
 

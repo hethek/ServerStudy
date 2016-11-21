@@ -51,18 +51,12 @@
     <Filter Include="소스 파일\99.Headers">
       <UniqueIdentifier>{96d691d7-01aa-4bc2-a700-d120da2dab81}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\03.Component\01.Collision">
+    <Filter Include="소스 파일\03.Component\02.Collision">
       <UniqueIdentifier>{1a50fc5b-43b2-4951-852b-f73c8997bef9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\03.Component\02.Camera">
+    <Filter Include="소스 파일\03.Component\03.Camera">
       <UniqueIdentifier>{cc9aec60-8f42-452e-a53d-e7c3fe0b19f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\02.GameOgject\03.Camera">
-      <UniqueIdentifier>{4e08db00-0392-413d-ba4c-ad287ef2e5b5}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -90,22 +84,16 @@
       <Filter>소스 파일\04.Manager\01.RenderManager</Filter>
     </ClCompile>
     <ClCompile Include="Collision.cpp">
-      <Filter>소스 파일\03.Component\01.Collision</Filter>
+      <Filter>소스 파일\03.Component\02.Collision</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>소스 파일\03.Component\02.Camera</Filter>
-    </ClCompile>
-    <ClCompile Include="MainCamera.cpp">
-      <Filter>소스 파일\02.GameOgject\03.Camera</Filter>
+      <Filter>소스 파일\03.Component\03.Camera</Filter>
     </ClCompile>
     <ClCompile Include="Interface.cpp">
       <Filter>소스 파일\00.Main\00.Interface</Filter>
     </ClCompile>
     <ClCompile Include="Program.cpp">
       <Filter>소스 파일\00.Main</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture3D.cpp">
-      <Filter>소스 파일\03.Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,16 +137,15 @@
       <Filter>소스 파일\99.Headers</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>소스 파일\03.Component\02.Camera</Filter>
+      <Filter>소스 파일\03.Component\03.Camera</Filter>
     </ClInclude>
     <ClInclude Include="Collision.h">
-      <Filter>소스 파일\03.Component\01.Collision</Filter>
+      <Filter>소스 파일\03.Component\02.Collision</Filter>
     </ClInclude>
-    <ClInclude Include="MainCamera.h">
-      <Filter>소스 파일\02.GameOgject\03.Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture3D.h">
-      <Filter>소스 파일\03.Component</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>소스 파일\04.Manager\02.InputManager</Filter>
+    </Text>
   </ItemGroup>
 </Project>

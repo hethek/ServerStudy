@@ -7,26 +7,32 @@ namespace BONE_FRAMEWORK
 	{
 	}
 
-
 	CCamera::~CCamera()
 	{
 	}
 
-	BOOL CCamera::Create(LPDIRECT3DDEVICE9 pDev)
-	{
-		pDev = pDev;
-		vcEye = D3DXVECTOR3(0, 0, -10);
-		vcLook = D3DXVECTOR3(0, 0, 0);
-		vcUp = D3DXVECTOR3(0, -1, 0);
 
-		D3DXMatrixPerspectiveFovLH(&mPrj, D3DX_PI / 4.f, 800.f / 600.f, 1.f, 5000.f);
-		D3DXMatrixLookAtLH(&mView, &vcEye, &vcLook, &vcUp);
+	BOOL CCamera::Create()
+	{
+		D3DXMatrixIdentity(&identityMatrix);
+
+		D3DXMatrixOrthoOffCenterLH(&projMatrix, 0, 800, 0, 600, 0.0f, 1.0f);
+
+		GETSINGLE(CRenderManager)->d3dDevice->SetTransform(D3DTS_PROJECTION, &projMatrix);
+		GETSINGLE(CRenderManager)->d3dDevice->SetTransform(D3DTS_WORLD, &identityMatrix);
 
 		return TRUE;
 	}
 
-	VOID CCamera::FrameMove()
+	VOID CCamera::FollowPlayer(CTexture *player)
 	{
+
+		identityMatrix._41 = player->imgPos.x - 400;
+		identityMatrix._42 = player->imgPos.y - 300;
+		identityMatrix._43 = player->imgPos.z;
+
+		D3DXMatrixInverse(&viewMatrix, 0, &identityMatrix);
+
+		GETSINGLE(CRenderManager)->d3dDevice->SetTransform(D3DTS_VIEW, &viewMatrix);
 	}
-		
 }

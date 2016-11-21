@@ -15,7 +15,7 @@ namespace BONE_FRAMEWORK
 
 	public:
 		CComponent(VOID);
-		~CComponent(VOID);
+		virtual ~CComponent(VOID);
 	};
 }
 

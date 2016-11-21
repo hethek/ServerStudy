@@ -32,12 +32,6 @@ namespace BONE_FRAMEWORK
 
 	VOID CBack::Update(double _timeDelta)
 	{
-		//back->SetOriginRect();
-	}
-
-	VOID CBack::Render(double _timeDelta)
-	{
-		back->Render();
 	}
 
 	VOID CBack::LateRender(double _timeDelta)

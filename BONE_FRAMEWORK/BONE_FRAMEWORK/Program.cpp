@@ -6,7 +6,6 @@
 #include "RenderManager.h"
 #include "Player.h"
 #include "Back.h"
-#include "MainCamera.h"
 
 using namespace BONE_FRAMEWORK;
 
@@ -32,13 +31,10 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance
 
 		SmartPointer<CPlayer> player;
 
-		SmartPointer<CMainCamera> mainCamera;
-
 		//¾À µî·Ï
 		SmartPointer<CScene> scene;
 		scene->RegisterGameObject(back, false);
 		scene->RegisterGameObject(player, false);
-		scene->RegisterGameObject(mainCamera, false);
 
 		GETSINGLE(CSceneManager)->RegisterScene(scene, "mainScene");
 		GETSINGLE(CSceneManager)->Start("mainScene");
