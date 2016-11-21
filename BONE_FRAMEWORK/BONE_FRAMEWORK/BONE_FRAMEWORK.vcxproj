@@ -137,6 +137,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Camera2.cpp" />
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Collider.cpp" />
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform2D.cpp" />
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform3D.cpp" />
     <ClCompile Include="Back.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Collision.cpp" />
@@ -153,6 +157,10 @@
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Camera2.h" />
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Collider.h" />
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform2D.h" />
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform3D.h" />
     <ClInclude Include="Back.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Collision.h" />

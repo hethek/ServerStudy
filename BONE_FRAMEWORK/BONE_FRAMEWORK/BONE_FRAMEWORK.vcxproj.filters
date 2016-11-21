@@ -57,6 +57,9 @@
     <Filter Include="소스 파일\03.Component\03.Camera">
       <UniqueIdentifier>{cc9aec60-8f42-452e-a53d-e7c3fe0b19f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\03.Component\04.Transform">
+      <UniqueIdentifier>{557324d4-7569-4784-a50e-8602207f1a47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -94,6 +97,18 @@
     </ClCompile>
     <ClCompile Include="Program.cpp">
       <Filter>소스 파일\00.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Collider.cpp">
+      <Filter>소스 파일\03.Component\02.Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Camera2.cpp">
+      <Filter>소스 파일\03.Component\03.Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform3D.cpp">
+      <Filter>소스 파일\03.Component\04.Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform2D.cpp">
+      <Filter>소스 파일\03.Component\04.Transform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +156,18 @@
     </ClInclude>
     <ClInclude Include="Collision.h">
       <Filter>소스 파일\03.Component\02.Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Collider.h">
+      <Filter>소스 파일\03.Component\02.Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Camera2.h">
+      <Filter>소스 파일\03.Component\03.Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform2D.h">
+      <Filter>소스 파일\03.Component\04.Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform3D.h">
+      <Filter>소스 파일\03.Component\04.Transform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
