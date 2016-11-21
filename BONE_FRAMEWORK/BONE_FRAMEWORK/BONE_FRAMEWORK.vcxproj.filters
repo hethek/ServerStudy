@@ -98,16 +98,16 @@
     <ClCompile Include="Program.cpp">
       <Filter>소스 파일\00.Main</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Collider.cpp">
-      <Filter>소스 파일\03.Component\02.Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Camera2.cpp">
+    <ClCompile Include="Camera2.cpp">
       <Filter>소스 파일\03.Component\03.Camera</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform3D.cpp">
+    <ClCompile Include="Collider.cpp">
+      <Filter>소스 파일\03.Component\02.Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform2D.cpp">
       <Filter>소스 파일\03.Component\04.Transform</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform2D.cpp">
+    <ClCompile Include="Transform3D.cpp">
       <Filter>소스 파일\03.Component\04.Transform</Filter>
     </ClCompile>
   </ItemGroup>
@@ -157,16 +157,16 @@
     <ClInclude Include="Collision.h">
       <Filter>소스 파일\03.Component\02.Collision</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Collider.h">
-      <Filter>소스 파일\03.Component\02.Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Camera2.h">
+    <ClInclude Include="Camera2.h">
       <Filter>소스 파일\03.Component\03.Camera</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform2D.h">
+    <ClInclude Include="Collider.h">
+      <Filter>소스 파일\03.Component\02.Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform2D.h">
       <Filter>소스 파일\03.Component\04.Transform</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\BONE_FRAMEWORK\BONE_FRAMEWORK\Transform3D.h">
+    <ClInclude Include="Transform3D.h">
       <Filter>소스 파일\03.Component\04.Transform</Filter>
     </ClInclude>
   </ItemGroup>

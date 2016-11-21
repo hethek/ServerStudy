@@ -15,3 +15,7 @@
 #define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
 
 #define GETSINGLE(classname)		classname::GetInstance()
+#define Vector2 D3DXVECTOR2
+#define Vector3 D3DXVECTOR3
+#define Matrix D3DXMATRIX
+#define Quaternion D3DXQUATERNION
